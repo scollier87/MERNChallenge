@@ -57,7 +57,7 @@ recordRoutes.route("/record/add").post(function (req, response) {
 recordRoutes.route("/update/:id").post(function (req, response) {
   let db_connect = dbo.getDb();
   let myquery = { _id: ObjectId(req.params.id) };
-  console.log(req.params.id)
+  // $set updates a specific key/value pair
   let newvalues = {
     $set: {
     firstName: req.body.firstName,

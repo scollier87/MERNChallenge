@@ -1,8 +1,8 @@
 const { MongoClient } = require("mongodb");
 const Db = process.env.ATLAS_URI;
-const client = new MongoClient(Db, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
+const client = new MongoClient(Db, { //creating a new instance of the mongo client
+  useNewUrlParser: true,  //connection string parser, allows it to switch parsers if an error is found
+  useUnifiedTopology: true, //connect method to mongodb deployment
 });
 
 var _db;
